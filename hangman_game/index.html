@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src='index.js' defer></script>
+    <title>Hangman</title>
+</head>
+
+<body>
+    <div class='header'>
+        Hangman game
+    </div>
+
+    <div class='gc'>
+        <div class='how-to game'>
+            <!-- keep this in a infocard -->
+            Use the alphabet below to guess the word, or click hint to get a clue.
+            <br>
+            Every time you get a character wrong, you lose a life.
+            If your lives get to 0, you lose the game. If you fill in all the blanks correctly, you win.
+        </div>
+        <div class='alphabets game' id='alphabets'>
+            <!-- import buttons through a js loop here.. -->
+        </div>
+        <div id='answer-tag' class='answer game'>
+            <span id='answer-key'></span>
+
+            <br><br>
+
+            You have <u id='lives' class='lives'>5</u> lives.
+
+            <br><br>
+
+            <button class='hint' onclick='giveHint()'>HINT</button>
+            <button class='reset' onclick="resetCharClick()">RESET</button>
+
+            <br>
+            <span>Hint: <b id='hint'></b></span>
+
+            <br><br>
+
+            <span><b id='answer-result'></b></span>
+
+        </div>
+    </div>
+</body>
+
+</html>

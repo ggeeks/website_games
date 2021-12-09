@@ -1,0 +1,108 @@
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/prodigy-sans.min.css");
+
+body {
+    font-family: "Prodigy Sans";
+}
+
+div {
+    border: 2px solid rgb(22, 20, 20);
+    border-radius: 2vmin;
+    width: 50%;
+    margin: 2% auto;
+    /* padding: 4%; */
+}
+
+.header {
+    text-align: center;
+    font-size: 2vw;
+    vertical-align: middle;
+    margin: auto;
+    width: fit-content;
+    padding: 0.45% 1.5%;
+}
+
+.gc {
+    margin: auto;
+    border: 2px solid rgba(37, 37, 37, 0);
+}
+
+.game {
+    text-align: center;
+    font-size: 150%;
+}
+
+.game ul {
+    width: fit-content;
+    list-style: none;
+    padding: 1% 0%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.how-to {
+    padding: 2%;
+}
+
+.alphabets {
+    width: 100%;
+}
+
+.game button {
+    text-align: center;
+    color: rgba(236, 236, 236, 0.85);
+    background-color: rgb(48, 48, 48);
+    font-weight: bold;
+    font-size: 120%;
+    cursor: pointer;
+    width: fit-content;
+    height: 10%;
+    border: 0.5px solid black;
+    border-radius: 20%;
+    padding: 0% 1.5%;
+    margin: 1% 0.4%;
+    transition: all 0.25s 30ms;
+}
+
+.alphabets .used {
+    color: rgba(122, 122, 122, 0.85);
+    background-color: rgb(104, 104, 104);
+    transform: scale(0.9);
+}
+
+button:hover {
+    color: rgba(41, 41, 41, 0.85);
+    background-color: rgb(219, 219, 219);
+    transform: scale(1.1);
+}
+
+.game .reset{
+    font-size: fit-content;
+    /* width: fit-content; */
+    padding: 1% 1%;
+    height: 28%;
+    border-radius: 15%;
+}
+
+.game .hint{
+    /* font-size: fit-content; */
+    width: fit-content;
+    padding: 1% 1%;
+    height: 28%;
+    border-radius: 15%;
+}
+
+.answer {
+    padding: 2%;
+}
+
+.draw {
+    padding: 5%;
+}
+
+.reset {
+    width: fit-content;
+}
+
