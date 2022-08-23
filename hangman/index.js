@@ -20,7 +20,7 @@ let wordArray = {
     "guess": "an estimate or conclusion",
 };
 let lives = 5;
-let word = Object.keys(wordArray)[Math.floor(Math.random()*Object.keys(wordArray).length)];
+let word = Object.keys(wordArray)[Math.floor(Math.random() * Object.keys(wordArray).length)];
 let lenWord = word.length;
 let placeholder = '_ '.repeat(lenWord);
 let inputWord = placeholder.replaceAll(" ", "");
@@ -65,11 +65,11 @@ function resetCharClick() {
     }
 
     lives = 5;
-    word = Object.keys(wordArray)[Math.floor(Math.random()*Object.keys(wordArray).length)];
+    word = Object.keys(wordArray)[Math.floor(Math.random() * Object.keys(wordArray).length)];
     lenWord = word.length;
     placeholder = '_ '.repeat(lenWord);
     inputWord = placeholder.replaceAll(" ", "");
-    
+
     document.getElementById('lives').innerHTML = lives
     placeholder = '_ '.repeat(lenWord);
     document.getElementById('answer-key').innerHTML = placeholder;
@@ -78,7 +78,7 @@ function resetCharClick() {
 }
 
 function giveHint() {
-    document.getElementById('hint').innerHTML = wordArray[word];
+    document.getElementById('hint').innerHTML = "Hint: " + wordArray[word];
 }
 
 function checkGameEvent() {
@@ -91,6 +91,15 @@ function checkGameEvent() {
 
     if (lives == 0) {
         document.getElementById('answer-result').innerHTML = 'You lost.';
+        placeholder = "";
+        for (let index = 0; index < word.length; index++) {
+            placeholder += word[index] + " ";
+        }
+        document.getElementById('answer-key').innerHTML = placeholder;
+
+        for (let i = 0; i < arAlphabets.length; i++) {
+            document.getElementById(arAlphabets[i]).className = 'used';
+        }
     }
 }
 
@@ -111,14 +120,14 @@ function charGuessEvent(passedChar) {
         lives -= 1;
         lives = Math.max(lives, 0);
     }
-    
+
 }
 
 // char replace logic
 
 function replaceCharAtIndex(orgStr, replChr, index) {
     let newStringArray = orgStr.split("");
-    newStringArray[index*2] = replChr;
+    newStringArray[index * 2] = replChr;
 
     let newString = newStringArray.join("");
     return newString;
